@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background: url("image/photo-14.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* container */
+.container {
+  width: 400px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(31, 28, 28, 0.698);
+  -webkit-box-shadow: 1px 6px 57px 43px rgba(231, 236, 240, 0.47);
+  -moz-box-shadow: 1px 6px 57px 43px rgba(231, 236, 240, 0.47);
+  box-shadow: 1px 6px 57px 43px rgba(231, 236, 240, 0.47);
+  border-radius: 15px;
+  padding: 2rem 2rem;
+}
+
+.container h1{
+  padding-top:2rem ;
+}
+#title{
+  font-weight: 400;
+}
+
+/* image container */
+.image-container {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+}
+.image-container img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 2px 30px 1px rgba(116, 182, 179, 0.2);
+-moz-box-shadow: 0px 2px 30px 1px rgba(116, 182, 179, 0.2);
+box-shadow: 0px 2px 30px 1px rgba(116, 182, 179, 0.2);
+  animation: imageRotate 10s linear infinite;
+  animation-play-state: paused;
+}
+/* image-container:keyframes */
+@keyframes imageRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.play img {
+  animation-play-state: running;
+}
+
+.range {
+  appearance: none;
+  width: 70%;
+  height: 20px;
+  border-radius: 15px;
+  background-color: darkgray;
+  outline: none;
+  overflow: hidden;
+  
+}
+.center{
+  padding: 10px;
+  width: 100%;
+ 
+}
+.form-element input[type="range"]{
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #aaa;
+  outline: none;
+  overflow: hidden;
+ 
+}
+.form-element input[type="range"]::-webkit-slider-thumb{
+appearance: none;
+width: 40px;
+height: 40px;
+background-color: #f06262;
+border-radius: 10px;
+box-shadow: -350px 0px 0px 340px #f06262;
+}
+
+#rangevalue{
+  font-weight: 100;
+}
+#range{
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(4, 4, 4, 0.27);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(4, 4, 4, 0.27);
+  box-shadow: 0px 0px 11px 1px rgba(4, 4, 4, 0.27)
+}
+
+
+/* time */
+.time {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+/* progress-container */
+.progress-container {
+  background-color: #fff;
+  width: 100%;
+  margin: 1rem auto;
+  height: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.progress {
+  width: 0%;
+  height: inherit;
+  background-color: tomato;
+  border-radius: inherit;
+}
+
+/* nav */
+.btn {
+  margin: 1.5rem 2rem;
+  border: none;
+  background-color: transparent;
+  color: rgba(51, 48, 48, 0.575);
+  font-size: 3rem;
+  
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.big {
+  font-size: 2rem;
+}
+
+/* media query */
+@media(max-width:460px){
+  .container{
+    width: 300px;
+    height: 500px;
+    font-size: inherit;
+  }
+}
