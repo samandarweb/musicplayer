@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+   <section class="section">
     <div class="container" id="container">
       <h1 id="title">On Top Of The World</h1>
 
@@ -17,25 +18,17 @@
         id="cover"/>
       </div>
 
-      <form>
-        <div class="center">
-          <div class="form-element">
-            <input type="range" class="range" min="0" max="100" value="90" step="10" id="volume" oninput="rangevalue.textContent = this.value">
-          </div>
-        </div>
-      
-      </form>
-      <div class="time">
-          <span id="start">00:00</span>
-          <span id="end">00:00</span>
-      </div>
       <div class="progress-container" id="progress-container">
-          <div class="progress" id="progress"></div>
+        <div class="progress" id="progress"></div>
+      </div>
+      
+      <audio src="" id="audio"></audio>
+      <div class="time">
+        <span id="start">00:00</span>
+        <span id="end">00:00</span>
       </div>
 
-      <audio src="" id="audio"></audio>
-
-
+      
 
       <div class="nav">
           <button class="btn" id="prev">
@@ -43,12 +36,21 @@
           </button>
           <button class="btn big" id="play">
             <i class="fas fa-play"></i>
-        </button>
-         <button class="btn" id="next">
+          </button>
+          <button class="btn" id="next">
             <i class="fas fa-forward"></i>
-        </button>
+          </button>
+        </div>
+        <form>
+          <div class="center">
+            <div class="form-element">
+              <input type="range" class="range" min="0" max="100" value="90" step="10" id="volume" oninput="rangevalue.textContent = this.value">
+            </div>
+          </div>
+        
+        </form>
       </div>
-    </div>
+   </section>
 
     <!-- js -->
     <script src="app.js "></script>
